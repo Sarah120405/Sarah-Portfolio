@@ -1,0 +1,56 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        background-color: #0f0f0f;
+        color: #f5f0eb;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    ::selection {
+        background-color: #e8705a33;
+        color: #f5f0eb;
+    }
+
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: #1a1714;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: #3a2e2a;
+        border-radius: 3px;
+    }
+}
+
+@utility card-style {
+    /* Apply regular Tailwind classes */
+    @apply bg-gradient-to-br from-bg-surface/80 to-[#171412]/80 rounded-3xl border border-stroke transition-all duration-300;
+
+    /* Write standard CSS box-shadow (so the formatter doesn't break it!) */
+    box-shadow: 0 0 40px rgba(232, 112, 90, 0.08);
+
+    /* Use modern CSS nesting for the hover state! */
+    &:hover {
+        @apply -translate-y-1;
+        box-shadow: 0 0 60px rgba(232, 112, 90, 0.12);
+    }
+}
+
+.icons {
+    @apply p-2.5 rounded-lg bg-stroke hover:bg-coral-500 transition-colors text-ink-primary;
+}
+
+.pill {
+    @apply bg-bg-card border border-stroke rounded-full px-2 py-0.5 text-xs font-mono text-ink-muted;
+}
