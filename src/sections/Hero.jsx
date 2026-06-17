@@ -23,24 +23,29 @@ function Hero() {
                         <li>Express.js</li>
                         <li>Tailwind CSS</li>
                         <li>PostgreSQL</li>
-
                     </ul>
 
                     <div className="flex justify-center md:justify-start gap-4">
-                        <button className="bg-coral-500 text-bg-base px-4 py-2 rounded-full cursor-pointer hover:bg-coral-950 transition-colors duration-300">View Projects</button>
-                        <button className="bg-transparent text-ink-primary px-4 py-2 rounded-full cursor-pointer border border-stroke hover:bg-ink-secondary/30 hover:bg-bg-surface transition-colors duration-300">Download CV</button>
+                        <a href="#projects" className="bg-coral-500 text-bg-base px-5 py-2.5 rounded-full cursor-pointer hover:bg-coral-950 transition-colors duration-300 font-medium text-sm text-center">View Projects</a>
+                        <a
+                            href="/pdf/Sarah Resume Full Stack.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-transparent text-ink-primary px-5 py-2.5 rounded-full cursor-pointer border border-stroke hover:bg-ink-secondary/30 hover:bg-bg-surface transition-colors duration-300 font-medium text-sm text-center"
+                        >
+                            Download CV
+                        </a>
                     </div>
                     <div className='flex items-center justify-center md:justify-start gap-3.5 mt-4'>
-                        <a href="https://github.com/Sarah120405" className='p-2.5 rounded-lg bg-stroke hover:bg-coral-500 transition-colors text-ink-primary'>
+                        <a href="https://github.com/Sarah120405" target="_blank" rel="noopener noreferrer" className='p-2.5 rounded-lg bg-stroke hover:bg-coral-500 transition-colors text-ink-primary'>
                             <FaGithub size={18} />
                         </a>
-                        <a href="https://www.linkedin.com/in/sarah-qureshi-sq12" className='p-2.5 rounded-lg bg-stroke hover:bg-coral-500 transition-colors text-ink-primary'>
+                        <a href="https://www.linkedin.com/in/sarah-qureshi-sq12" target="_blank" rel="noopener noreferrer" className='p-2.5 rounded-lg bg-stroke hover:bg-coral-500 transition-colors text-ink-primary'>
                             <FaLinkedin size={18} />
                         </a>
-                        <a href="sarahqureshi2005@gmail.com" className='p-2.5 rounded-lg bg-stroke hover:bg-coral-500 transition-colors text-ink-primary'>
+                        <a href="mailto:sarahqureshi2005@gmail.com" className='p-2.5 rounded-lg bg-stroke hover:bg-coral-500 transition-colors text-ink-primary'>
                             <FaEnvelope size={18} />
                         </a>
-
                     </div>
 
                 </div>

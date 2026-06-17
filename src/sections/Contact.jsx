@@ -14,11 +14,26 @@ function Contact() {
         e.preventDefault();
         setStatus({ submitting: true, submitted: false, error: null });
 
-        // Simulate API request delay
-        setTimeout(() => {
-            setStatus({ submitting: false, submitted: true, error: null });
-            setFormData({ name: "", email: "", message: "" });
-        }, 1500);
+        try {
+            const response = await fetch("https://formsubmit.co/ajax/sarahqureshi2005@gmail.com", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                body: JSON.stringify(formData)
+            });
+
+            const data = await response.json();
+            if (response.ok && (data.success === "true" || data.success === true)) {
+                setStatus({ submitting: false, submitted: true, error: null });
+                setFormData({ name: "", email: "", message: "" });
+            } else {
+                throw new Error(data.message || "Failed to send message. Please try again.");
+            }
+        } catch (err) {
+            setStatus({ submitting: false, submitted: false, error: err.message || "Something went wrong." });
+        }
     };
 
     const contactDetails = [
@@ -198,6 +213,13 @@ function Contact() {
                                             className="w-full bg-[#171412] border border-stroke rounded-xl px-4 py-3 text-sm text-ink-primary placeholder-ink-muted/50 focus:outline-none focus:border-coral-500/50 focus:ring-1 focus:ring-coral-500/20 resize-none transition-all duration-300"
                                         />
                                     </div>
+
+                                    {/* Error Feedback */}
+                                    {status.error && (
+                                        <p className="text-xs text-coral-400 font-semibold bg-coral-950/20 border border-coral-500/20 rounded-lg p-3 animate-pulse">
+                                            ⚠️ {status.error}
+                                        </p>
+                                    )}
 
                                     {/* Submit Button */}
                                     <button

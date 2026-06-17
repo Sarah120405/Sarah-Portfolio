@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FaBriefcase, FaGraduationCap, FaHeart } from "react-icons/fa";
+import { FaBriefcase, FaGraduationCap, FaHeart, FaTrophy } from "react-icons/fa";
 
 const TIMELINE_DATA = [
     {
@@ -12,6 +12,21 @@ const TIMELINE_DATA = [
         accentClass: "border-emerald-500/20 text-emerald-500",
         nodeGlowClass: "shadow-[0_0_20px_rgba(16,185,129,0.4)] border-emerald-500",
         hoverClass: "hover:border-emerald-500/30 hover:shadow-[0_0_40px_rgba(16,185,129,0.05)]",
+    },
+    {
+        id: "hackthestack",
+        type: "achievement",
+        title: "Hackathon Competitor",
+        subtitle: "StackCode Training Institute",
+        duration: "2026",
+        description: "Two back-to-back podium finishes across both editions of the institute's flagship hackathon.",
+        bullets: [
+            <><span className="text-ink-primary font-semibold">1st place</span> — HackTheStack 1</>,
+            <><span className="text-ink-primary font-semibold">3rd place</span> — HackTheStack 2 (2nd Runner Up)</>
+        ],
+        accentClass: "border-amber-500/20 text-amber-400",
+        nodeGlowClass: "shadow-[0_0_20px_rgba(251,191,36,0.4)] border-amber-400",
+        hoverClass: "hover:border-amber-500/30 hover:shadow-[0_0_40px_rgba(251,191,36,0.05)]",
     },
     {
         id: "internship",
@@ -91,6 +106,9 @@ function Experience() {
                                         {item.type === "work" && (
                                             <FaBriefcase className={`w-3.5 h-3.5 ${isHovered ? "text-indigo-400" : "text-ink-muted"}`} />
                                         )}
+                                        {item.type === "achievement" && (
+                                            <FaTrophy className={`w-3.5 h-3.5 ${isHovered ? "text-amber-400" : "text-ink-muted"}`} />
+                                        )}
                                         {item.type === "education" && (
                                             <FaGraduationCap className={`w-4 h-4 ${isHovered ? "text-emerald-500" : "text-ink-muted"}`} />
                                         )}
@@ -169,6 +187,47 @@ function Experience() {
                                                         </span>
                                                     ))}
                                                 </div>
+                                            </div>
+                                        )}
+
+                                        {/* Achievement Card Layout */}
+                                        {item.type === "achievement" && (
+                                            <div className="space-y-4">
+                                                <div className="flex flex-col sm:flex-row sm:items-start justify-between gap-2">
+                                                    <div className="flex items-center gap-3">
+                                                        <div className="flex items-center justify-center w-10 h-10 bg-amber-500/10 border border-amber-500/20 rounded-xl text-amber-400">
+                                                            <FaTrophy size={14} />
+                                                        </div>
+                                                        <div>
+                                                            <h2 className="text-lg md:text-xl font-bold text-ink-primary leading-tight">
+                                                                {item.title}
+                                                            </h2>
+                                                            <p className="text-sm text-amber-400 font-medium">
+                                                                {item.subtitle}
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                    <div className="text-right self-start sm:self-auto pl-13 sm:pl-0">
+                                                        <p className="text-xs md:text-sm text-ink-primary font-medium">{item.duration}</p>
+                                                    </div>
+                                                </div>
+
+                                                {/* Short Description */}
+                                                {item.description && (
+                                                    <p className="text-sm text-ink-muted leading-relaxed pl-0 sm:pl-13">
+                                                        {item.description}
+                                                    </p>
+                                                )}
+
+                                                {/* Bullet Points with Arrow Connectors */}
+                                                <ul className="space-y-3 text-sm text-ink-muted leading-relaxed pl-0 sm:pl-13">
+                                                    {item.bullets.map((bullet, idx) => (
+                                                        <li key={idx} className="flex items-start">
+                                                            <span className="text-coral-500 mr-3 flex-shrink-0 font-bold select-none">→</span>
+                                                            <span>{bullet}</span>
+                                                        </li>
+                                                    ))}
+                                                </ul>
                                             </div>
                                         )}
 
