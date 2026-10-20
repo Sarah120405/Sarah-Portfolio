@@ -76,7 +76,7 @@ function Contact() {
             {/* Background decorative glow */}
             <div className="absolute right-0 bottom-0 w-[400px] h-[400px] bg-coral-500/5 rounded-full blur-[100px] pointer-events-none" />
 
-            <div className="max-w-7xl mx-auto px-6 md:px-8 w-full z-10">
+            <div className="mx-auto max-w-7xl w-full z-10">
                 {/* Header */}
                 <div className="bg-coral-950 text-sm text-coral-500 animate-pulse w-fit px-3 py-1 rounded-full mb-4">
                     <p>Get in touch</p>
@@ -93,7 +93,7 @@ function Contact() {
 
                     {/* Left Column: Contact Cards */}
                     <div className="lg:col-span-5 space-y-4">
-                        <div className="card-style p-6 flex flex-col gap-6">
+                        <div className="card-style p-6 flex flex-col gap-4 h-full">
                             <h2 className="text-xl font-bold text-ink-primary">Let's Connect</h2>
                             <p className="text-sm text-ink-muted leading-relaxed">
                                 Whether you have a question, want to talk about developer opportunities, or just want to connect — feel free to send an email or reach out on social channels.
@@ -105,7 +105,7 @@ function Contact() {
                                     const isClickable = !!detail.link;
 
                                     const CardContent = (
-                                        <div className="flex items-center gap-4 p-4 rounded-2xl border border-stroke bg-bg-base/30 hover:border-stroke/80 transition-all duration-300">
+                                        <div className="flex items-center gap-4 p-2 rounded-2xl border border-stroke bg-bg-base/30 hover:border-stroke/80 transition-all duration-300">
                                             <div className={`flex items-center justify-center w-10 h-10 rounded-xl border ${detail.bgColor} ${detail.color}`}>
                                                 <IconComponent size={16} />
                                             </div>
@@ -140,7 +140,7 @@ function Contact() {
 
                     {/* Right Column: Contact Form */}
                     <div className="lg:col-span-7">
-                        <div className="card-style p-6 md:p-8 relative">
+                        <div className="card-style p-6 md:p-8 relative h-full">
                             {status.submitted ? (
                                 /* Success State Panel */
                                 <div className="flex flex-col items-center justify-center text-center py-12 space-y-4 animate-fadeIn">

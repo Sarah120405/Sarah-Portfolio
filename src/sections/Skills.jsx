@@ -4,7 +4,7 @@ const SKILLS_DATA = [
     {
         category: "Frontend",
         icon: FaReact,
-        skills: ["React.js", "Tailwind CSS", "TanStack Query", "JavaScript", "HTML / CSS"],
+        skills: ["React.js", "Tailwind CSS", "TanStack Query", "Next.js", "TypeScript", "Redux Toolkit", "JavaScript", "HTML / CSS"],
         colorClass: "text-[#e8705a]",
         bgClass: "bg-[#e8705a]/10",
         dotClass: "bg-[#e8705a]",
@@ -13,7 +13,7 @@ const SKILLS_DATA = [
     {
         category: "Backend",
         icon: FaServer,
-        skills: ["Node.js", "Express.js", "FastAPI", "REST APIs", "WebSocket"],
+        skills: ["Node.js", "Express.js", "FastAPI", "REST APIs", "WebSocket", "Socket.IO"],
         colorClass: "text-[#818cf8]",
         bgClass: "bg-[#818cf8]/10",
         dotClass: "bg-[#818cf8]",
@@ -22,7 +22,7 @@ const SKILLS_DATA = [
     {
         category: "Database & ORM",
         icon: FaDatabase,
-        skills: ["PostgreSQL", "Prisma ORM", "SQLite", "SQL"],
+        skills: ["PostgreSQL", "Prisma ORM", "SQLite", "SQL", "MongoDB", "Mongoose", "MySQL", "Redis"],
         colorClass: "text-[#34d399]",
         bgClass: "bg-[#34d399]/10",
         dotClass: "bg-[#34d399]",
@@ -31,16 +31,16 @@ const SKILLS_DATA = [
     {
         category: "Auth & Security",
         icon: FaLock,
-        skills: ["JWT", "bcrypt", "2FA", "RBAC", "Joi Validation"],
+        skills: ["JWT", "bcrypt", "2FA", "RBAC", "Joi Validation", "Zod Validation"],
         colorClass: "text-[#fbbf24]",
         bgClass: "bg-[#fbbf24]/10",
         dotClass: "bg-[#fbbf24]",
         hoverClass: "hover:border-[#fbbf24]/30 hover:shadow-[0_0_30px_rgba(251,191,36,0.08)]",
     },
     {
-        category: "Data & ML",
+        category: "Data, AI & ML",
         icon: FaBrain,
-        skills: ["Python", "Pandas", "NumPy", "Scikit-learn", "XGBoost"],
+        skills: ["Python", "Pandas", "NumPy", "Scikit-learn", "XGBoost", "Gemini API"],
         colorClass: "text-[#f472b6]",
         bgClass: "bg-[#f472b6]/10",
         dotClass: "bg-[#f472b6]",
@@ -49,7 +49,7 @@ const SKILLS_DATA = [
     {
         category: "Tools & Platforms",
         icon: FaTools,
-        skills: ["Git", "GitHub", "Postman", "VS Code", "Google Colab"],
+        skills: ["Git", "GitHub", "Postman", "VS Code", "Google Colab", "Docker", "Vercel", "Neon"],
         colorClass: "text-[#2dd4bf]",
         bgClass: "bg-[#2dd4bf]/10",
         dotClass: "bg-[#2dd4bf]",
@@ -60,7 +60,7 @@ const SKILLS_DATA = [
 function Skills() {
     return (
         <section className="min-h-screen flex flex-col items-center py-16" id="skills">
-            <div className="max-w-7xl mx-auto px-6 md:px-8 w-full">
+            <div className="mx-auto max-w-7xl w-full">
 
                 {/* Header Section */}
                 <h1 className="text-3xl md:text-4xl font-bold leading-tight text-ink-primary mb-2">
@@ -77,7 +77,7 @@ function Skills() {
                         return (
                             <div
                                 key={item.category}
-                                className={`card-style p-6 flex flex-col gap-6 transition-all duration-300 ${item.hoverClass}`}
+                                className={`card-style h-full p-6 flex flex-col gap-6 transition-all duration-300 ${item.hoverClass}`}
                             >
                                 {/* Category Header */}
                                 <div className="flex items-center gap-4">

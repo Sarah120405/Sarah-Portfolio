@@ -18,19 +18,18 @@ function Hero() {
                     </h1>
                     <p className="text-ink-muted text-md lg:text-lg py-4">Computer Science student at Indus University with hands-on experience in building real-time platforms, Android apps, and high-performance web applications with measurable impact.</p>
                     <ul className="text-ink-muted flex flex-row gap-4 flex-wrap py-4">
-                        <li>React.js</li>
-                        <li>Node.js</li>
-                        <li>Express.js</li>
-                        <li>Tailwind CSS</li>
-                        <li>PostgreSQL</li>
+                        <li className="pill text-sm">React.js</li>
+                        <li className="pill text-sm">Node.js</li>
+                        <li className="pill text-sm">Express.js</li>
+                        <li className="pill text-sm">Tailwind CSS</li>
+                        <li className="pill text-sm">PostgreSQL</li>
                     </ul>
 
                     <div className="flex justify-center md:justify-start gap-4">
                         <a href="#projects" className="bg-coral-500 text-bg-base px-5 py-2.5 rounded-full cursor-pointer hover:bg-coral-950 transition-colors duration-300 font-medium text-sm text-center">View Projects</a>
                         <a
-                            href="/pdf/Sarah Resume Full Stack.pdf"
-                            target="_blank"
-                            rel="noopener noreferrer"
+                            href="pdf/Sarah Resume Full Stack.pdf"
+                            download="Sarah_Qureshi_Resume.pdf"
                             className="bg-transparent text-ink-primary px-5 py-2.5 rounded-full cursor-pointer border border-stroke hover:bg-ink-secondary/30 hover:bg-bg-surface transition-colors duration-300 font-medium text-sm text-center"
                         >
                             Download CV
@@ -50,7 +49,7 @@ function Hero() {
 
                 </div>
                 <div className="order-1 lg:order-2 flex justify-center items-center">
-                    <div className="flex-shrink-0 w-40 h-40 md:w-54 md:h-54 border-2 border-stroke bg-bg-surface/50 backdrop-blur-sm flex items-center justify-center p-1.5 relative group overflow-hidden shadow-inner">
+                    <div className="flex-shrink-0 w-48 h-48 rounded-2xl md:w-54 md:h-54 border-2 border-stroke bg-bg-surface/50 backdrop-blur-sm flex items-center justify-center p-1.5 relative group overflow-hidden shadow-inner">
                         <img
                             src={sarahProfileImg}
                             alt="Sarah Qureshi Profile"

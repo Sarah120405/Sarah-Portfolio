@@ -14,6 +14,25 @@ const TIMELINE_DATA = [
         hoverClass: "hover:border-emerald-500/30 hover:shadow-[0_0_40px_rgba(16,185,129,0.05)]",
     },
     {
+        id: "tridhya",
+        type: "work",
+        role: "MERN Full Stack Intern",
+        company: "Tridhya Tech",
+        duration: "Jul 2026 — present",
+        subDuration: "Internship",
+        current: true,
+        highlight: "130+ test cases",
+        bullets: [
+            <>Completed a structured <span className="text-ink-primary font-semibold">MERN program</span> covering TypeScript, React, Redux Toolkit, Next.js, Node/Express, MongoDB and SQL, building apps such as an event management platform and a library system.</>,
+            <>Built and deployed <span className="text-ink-primary font-semibold">SupportHub</span>, an AI-powered ticket system with real-time chat, SLA monitoring and role-based access across four user roles.</>,
+            <>Wrote a 130+ case test plan, fixed defects across auth, real-time updates and uploads, and shipped to production with Docker, Vercel, Neon and Redis.</>
+        ],
+        tags: ["Next.js", "Node.js", "PostgreSQL", "Socket.IO"],
+        accentClass: "border-indigo-500/20 text-indigo-400",
+        nodeGlowClass: "shadow-[0_0_20px_rgba(99,102,241,0.4)] border-indigo-400",
+        hoverClass: "hover:border-indigo-500/30 hover:shadow-[0_0_40px_rgba(99,102,241,0.05)]",
+    },
+    {
         id: "hackthestack",
         type: "achievement",
         title: "Hackathon Competitor",
@@ -64,7 +83,7 @@ function Experience() {
 
     return (
         <section className="min-h-screen flex flex-col items-center py-10" id="experience">
-            <div className="max-w-7xl mx-auto px-6 md:px-8 w-full">
+            <div className=" mx-auto max-w-7xl w-full">
 
                 {/* Section Header */}
                 <div className="bg-coral-950 text-sm text-coral-500 animate-pulse w-fit px-3 py-1 rounded-full mb-4">
@@ -99,12 +118,12 @@ function Experience() {
                                     >
                                         {item.type === "status" && (
                                             <span className="relative flex h-3 w-3">
-                                                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                                <span className={`animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75`}></span>
                                                 <span className="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
                                             </span>
                                         )}
                                         {item.type === "work" && (
-                                            <FaBriefcase className={`w-3.5 h-3.5 ${isHovered ? "text-indigo-400" : "text-ink-muted"}`} />
+                                            <FaBriefcase className={`w-3 h-3 ${isHovered ? "text-indigo-400" : "text-ink-muted"}`} />
                                         )}
                                         {item.type === "achievement" && (
                                             <FaTrophy className={`w-3.5 h-3.5 ${isHovered ? "text-amber-400" : "text-ink-muted"}`} />

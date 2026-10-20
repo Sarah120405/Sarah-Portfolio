@@ -1,13 +1,34 @@
 import { useState } from "react";
-import { FaDesktop, FaShoppingCart, FaBookOpen } from "react-icons/fa";
+import { FaDesktop, FaShoppingCart, FaBookOpen, FaHeadset } from "react-icons/fa";
 import ProjectModal from "../components/ProjectModal";
 import godsEyeImg from "../assets/God'sE-desktop.png";
 import categoryPageImg from "../assets/Category Page.png";
 import inkverseImg from "../assets/author-page.png";
+import supportHubImg from "../assets/support-hub.png";
 
 const PROJECTS_DATA = [
     {
         id: "01",
+        title: "SupportHub",
+        subtitle: "AI-Powered Ticket Management",
+        description: "A real-time customer support platform with AI assistance, SLA monitoring and role-based workflows.",
+        detailedDescription: "SupportHub connects Customers, Support Agents, Developers and Admins in one ticket workflow. It uses JWT auth in httpOnly cookies with server-side RBAC, and Socket.IO for live chat and status updates, scaled across instances with a Redis adapter. Gemini provides opt-in category and priority suggestions, reply drafts and conversation summaries. A scheduled job tracks SLA deadlines and sends warning and breach emails, and admins get reports and team performance dashboards. It is deployed with Docker, Vercel, Neon PostgreSQL and Cloudinary.",
+        tags: ["Next.js", "Node.js", "Socket.IO", "TypeScript", "PostgreSQL", "Prisma ORM", "Redux Toolkit", "Gemini API", "Redis", "Docker"],
+        image: supportHubImg,
+        icon: FaHeadset,
+        inProgress: false,
+        stats: [
+            { label: "User Roles", value: "4", type: "accuracy" },
+            { label: "AI Features", value: "4", type: "speed" },
+            { label: "Test Cases", value: "130+", type: "accuracy" }
+        ],
+        links: {
+            github: "https://github.com/Sarah120405/tridhya-inernship-mern/tree/main/day-56",
+            live: "https://tridhya-inernship-mern-ylwh.vercel.app"
+        }
+    },
+    {
+        id: "02",
         title: "Inkverse",
         subtitle: "Book publishing Platform",
         description: "A platform for independent authors to publish, manage, and distribute their books.",
@@ -27,7 +48,7 @@ const PROJECTS_DATA = [
         }
     },
     {
-        id: "02",
+        id: "03",
         title: "God's Eye",
         subtitle: "AI Powered Monitoring Platform",
         description: "An AI powered monitoring platform that combines real-time tracking, ML analysis, and remote assistance.",
@@ -48,7 +69,7 @@ const PROJECTS_DATA = [
         }
     },
     {
-        id: "03",
+        id: "04",
         title: "Flashcart",
         subtitle: "Android E-Commerce App",
         description: "A modern e-commerce app with real-time cart tracking and category browsing.",
@@ -73,7 +94,7 @@ function Projects() {
 
     return (
         <section className="min-h-screen flex flex-col items-center py-16" id="projects">
-            <div className="max-w-7xl mx-auto px-6 md:px-8">
+            <div className="max-w-7xl mx-auto w-full">
                 {/* Header */}
                 <div className="bg-coral-950 text-sm text-coral-500 animate-pulse w-fit px-3 py-1 rounded-full mb-4">
                     <p>What I have built</p>
@@ -85,15 +106,15 @@ function Projects() {
                     Click any card to explore system architectures, statistics, and project details.
                 </p>
 
-                {/* Grid Layout: Stacks vertical cards in 3 columns on desktop */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+                {/* Grid Layout: 3-col on desktop; lone 4th card is centered via last:lg:col-start-2 */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 items-stretch">
                     {PROJECTS_DATA.map((project) => {
                         const Icon = project.icon;
                         return (
                             <div
                                 key={project.id}
                                 onClick={() => setSelectedProject(project)}
-                                className="group card-style flex flex-col justify-between p-6 cursor-pointer hover:border-coral-500/40"
+                                className="group card-style flex flex-col justify-between p-6 cursor-pointer hover:border-coral-500/40 last:lg:col-start-2"
                             >
                                 <div>
                                     {/* Top Row: Icon & Project Number */}
@@ -135,17 +156,22 @@ function Projects() {
                                             onError={(e) => { e.target.src = "https://placehold.co/400x200/1a1714/e8705a?text=Preview" }}
                                         />
                                     </div>
-                                    <div className="flex flex-wrap gap-1.5">
-                                        {project.tags.slice(0, 3).map((tag) => (
-                                            <span key={tag} className="pill text-[10px]">
-                                                {tag}
-                                            </span>
-                                        ))}
-                                        {project.tags.length > 3 && (
-                                            <span className="pill text-[10px] text-coral-400">
-                                                +{project.tags.length - 3} more
-                                            </span>
-                                        )}
+                                    <div className="flex items-center justify-between gap-3">
+                                        <div className="flex flex-wrap gap-1.5">
+                                            {project.tags.slice(0, 3).map((tag) => (
+                                                <span key={tag} className="pill text-[10px]">
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                            {project.tags.length > 3 && (
+                                                <span className="pill text-[10px] text-coral-400">
+                                                    +{project.tags.length - 3} more
+                                                </span>
+                                            )}
+                                        </div>
+                                        <span className="text-xs text-coral-500/50 group-hover:text-coral-500 transition-colors duration-300 shrink-0">
+                                            View Details →
+                                        </span>
                                     </div>
                                 </div>
                             </div>
