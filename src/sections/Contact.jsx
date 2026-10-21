@@ -103,7 +103,7 @@ function Contact() {
       {/* Background decorative glow */}
       <div className="absolute right-0 bottom-0 w-[400px] h-[400px] bg-coral-500/5 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-8 w-full z-10">
+      <div className="mx-auto max-w-7xl w-full z-10">
         {/* Header */}
         <div className="bg-coral-950 text-sm text-coral-500 animate-pulse w-fit px-3 py-1 rounded-full mb-4">
           <p>Get in touch</p>

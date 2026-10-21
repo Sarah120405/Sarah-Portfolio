@@ -11,6 +11,7 @@ function Header() {
 
                     <span className="text-ink-primary font-bold text-lg">Sarah Qureshi</span>
                     <ul className="flex items-center gap-8 text-ink-secondary font-medium hidden md:flex">
+                        <li className="list-none"><a href="#education" className="cursor-pointer hover:text-ink-primary transition-colors">Education</a></li>
                         <li className="list-none"><a href="#projects" className="cursor-pointer hover:text-ink-primary transition-colors">Projects</a></li>
                         <li className="list-none"><a href="#skills" className="cursor-pointer hover:text-ink-primary transition-colors">Skills</a></li>
                         <li className="list-none"><a href="#experience" className="cursor-pointer hover:text-ink-primary transition-colors">Experience</a></li>
@@ -22,6 +23,7 @@ function Header() {
                 <div className="md:hidden">
                     {isMenuOpen && (
                         <ul className="absolute top-full left-0 right-0 bg-bg-base border-b border-stroke py-4">
+                            <li className="list-none px-6 py-2"><a href="#education" onClick={() => setIsMenuOpen(false)} className="cursor-pointer hover:text-ink-primary transition-colors block">Education</a></li>
                             <li className="list-none px-6 py-2"><a href="#projects" onClick={() => setIsMenuOpen(false)} className="cursor-pointer hover:text-ink-primary transition-colors block">Projects</a></li>
                             <li className="list-none px-6 py-2"><a href="#skills" onClick={() => setIsMenuOpen(false)} className="cursor-pointer hover:text-ink-primary transition-colors block">Skills</a></li>
                             <li className="list-none px-6 py-2"><a href="#experience" onClick={() => setIsMenuOpen(false)} className="cursor-pointer hover:text-ink-primary transition-colors block">Experience</a></li>

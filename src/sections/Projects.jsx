@@ -9,7 +9,7 @@ import ProjectModal from "../components/ProjectModal";
 import godsEyeImg from "../assets/God'sE-desktop.png";
 import categoryPageImg from "../assets/Category Page.png";
 import inkverseImg from "../assets/author-page.png";
-import supportHubImg from "../assets/ticket-dashboard.png";
+import supportHubImg from "../assets/support-hub.png";
 
 const PROJECTS_DATA = [
   {
@@ -131,7 +131,7 @@ function Projects() {
       className="min-h-screen flex flex-col items-center py-16"
       id="projects"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-8">
+      <div className="max-w-7xl mx-auto w-full">
         {/* Header */}
         <div className="bg-coral-950 text-sm text-coral-500 animate-pulse w-fit px-3 py-1 rounded-full mb-4">
           <p>What I have built</p>
@@ -144,15 +144,15 @@ function Projects() {
           project details.
         </p>
 
-        {/* Grid Layout: Stacks vertical cards in 3 columns on desktop */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
+        {/* Grid Layout: 3-col on desktop; lone 4th card is centered via last:lg:col-start-2 */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 items-stretch">
           {PROJECTS_DATA.map((project) => {
             const Icon = project.icon;
             return (
               <div
                 key={project.id}
                 onClick={() => setSelectedProject(project)}
-                className="group card-style flex flex-col justify-between p-6 cursor-pointer hover:border-coral-500/40"
+                className="group card-style flex flex-col justify-between p-6 cursor-pointer hover:border-coral-500/40 last:lg:col-start-2"
               >
                 <div>
                   {/* Top Row: Icon & Project Number */}
@@ -197,17 +197,22 @@ function Projects() {
                       }}
                     />
                   </div>
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.tags.slice(0, 3).map((tag) => (
-                      <span key={tag} className="pill text-[10px]">
-                        {tag}
-                      </span>
-                    ))}
-                    {project.tags.length > 3 && (
-                      <span className="pill text-[10px] text-coral-400">
-                        +{project.tags.length - 3} more
-                      </span>
-                    )}
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="flex flex-wrap gap-1.5">
+                      {project.tags.slice(0, 3).map((tag) => (
+                        <span key={tag} className="pill text-[10px]">
+                          {tag}
+                        </span>
+                      ))}
+                      {project.tags.length > 3 && (
+                        <span className="pill text-[10px] text-coral-400">
+                          +{project.tags.length - 3} more
+                        </span>
+                      )}
+                    </div>
+                    <span className="text-xs text-coral-500/50 group-hover:text-coral-500 transition-colors duration-300 shrink-0">
+                      View Details →
+                    </span>
                   </div>
                 </div>
               </div>

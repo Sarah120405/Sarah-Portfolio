@@ -132,7 +132,7 @@ function Experience() {
       className="min-h-screen flex flex-col items-center py-10"
       id="experience"
     >
-      <div className="max-w-7xl mx-auto px-6 md:px-8 w-full">
+      <div className=" mx-auto max-w-7xl w-full">
         {/* Section Header */}
         <div className="bg-coral-950 text-sm text-coral-500 animate-pulse w-fit px-3 py-1 rounded-full mb-4">
           <p>Where I've worked</p>
