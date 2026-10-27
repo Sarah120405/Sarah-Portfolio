@@ -13,13 +13,12 @@ const SKILLS_DATA = [
     icon: FaReact,
     skills: [
       "React.js",
+      "Next.js",
+      "JavaScript",
+      "TypeScript",
       "Tailwind CSS",
       "TanStack Query",
-      "Next.js",
-      "TypeScript",
       "Redux Toolkit",
-      "JavaScript",
-      "HTML / CSS",
     ],
     colorClass: "text-[#e8705a]",
     bgClass: "bg-[#e8705a]/10",
@@ -51,7 +50,6 @@ const SKILLS_DATA = [
       "PostgreSQL",
       "Prisma ORM",
       "SQLite",
-      "SQL",
       "MongoDB",
       "Mongoose",
       "MySQL",
@@ -100,16 +98,7 @@ const SKILLS_DATA = [
   {
     category: "Tools & Platforms",
     icon: FaTools,
-    skills: [
-      "Git",
-      "GitHub",
-      "Postman",
-      "VS Code",
-      "Google Colab",
-      "Docker",
-      "Vercel",
-      "Neon",
-    ],
+    skills: ["Git", "GitHub", "Postman", "VS Code", "Google Colab", "Docker"],
     colorClass: "text-[#2dd4bf]",
     bgClass: "bg-[#2dd4bf]/10",
     dotClass: "bg-[#2dd4bf]",
@@ -124,16 +113,17 @@ function Skills() {
       className="min-h-screen flex flex-col items-center py-16"
       id="skills"
     >
-      <div className="mx-auto max-w-7xl w-full">
+      <div className="mx-auto max-w-7xl w-full px-6">
         {/* Header Section */}
-        <h1 className="text-3xl md:text-4xl font-bold leading-tight text-ink-primary mb-2">
-          Skills & Technologies
-        </h1>
-        <p className="text-ink-muted text-sm lg:text-base mb-12">
-          Tools and languages I use to design, build, and ship full stack
-          applications.
-        </p>
-
+        <header className="mb-6">
+          <h1 className="text-3xl md:text-4xl font-bold leading-tight text-ink-primary mb-2">
+            Skills & Technologies
+          </h1>
+          <p className="text-ink-muted text-sm lg:text-base">
+            Tools and languages I use to design, build, and ship full stack
+            applications.
+          </p>
+        </header>
         {/* Grid Container */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-center">
           {SKILLS_DATA.map((item) => {
@@ -141,7 +131,7 @@ function Skills() {
             return (
               <div
                 key={item.category}
-                className={`card-style h-full p-6 flex flex-col gap-6 transition-all duration-300 ${item.hoverClass}`}
+                className={`card-style h-full p-4 flex flex-col gap-6 transition-all duration-300 ${item.hoverClass}`}
               >
                 {/* Category Header */}
                 <div className="flex items-center gap-4">

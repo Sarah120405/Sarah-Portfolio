@@ -131,32 +131,33 @@ function Projects() {
       className="min-h-screen flex flex-col items-center py-16"
       id="projects"
     >
-      <div className="max-w-7xl mx-auto w-full">
+      <div className="max-w-7xl mx-auto w-full px-6">
         {/* Header */}
-        <div className="bg-coral-950 text-sm text-coral-500 animate-pulse w-fit px-3 py-1 rounded-full mb-4">
-          <p>What I have built</p>
-        </div>
-        <h1 className="text-3xl md:text-4xl font-bold leading-tight text-ink-primary mb-2">
-          Featured Projects
-        </h1>
-        <p className="text-ink-muted text-sm lg:text-base mb-12">
-          Click any card to explore system architectures, statistics, and
-          project details.
-        </p>
-
+        <header className="mb-6">
+          <div className="bg-coral-950 text-sm text-coral-500 animate-pulse w-fit px-3 py-1 rounded-full mb-2">
+            <p>What I have built</p>
+          </div>
+          <h1 className="text-3xl md:text-4xl font-bold leading-tight text-ink-primary mb-2">
+            Featured Projects
+          </h1>
+          <p className="text-ink-muted text-sm lg:text-base">
+            Click any card to explore system architectures, statistics, and
+            project details.
+          </p>
+        </header>
         {/* Grid Layout: 3-col on desktop; lone 4th card is centered via last:lg:col-start-2 */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 items-stretch">
           {PROJECTS_DATA.map((project) => {
             const Icon = project.icon;
             return (
               <div
                 key={project.id}
                 onClick={() => setSelectedProject(project)}
-                className="group card-style flex flex-col justify-between p-6 cursor-pointer hover:border-coral-500/40 last:lg:col-start-2"
+                className="group card-style flex flex-col justify-between p-4 cursor-pointer hover:border-coral-500/40 last:lg:col-start-2"
               >
                 <div>
                   {/* Top Row: Icon & Project Number */}
-                  <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center justify-center w-11 h-11 bg-bg-surface border border-stroke rounded-xl text-coral-500 shadow-sm">
                       <Icon size={18} />
                     </div>
@@ -174,11 +175,12 @@ function Projects() {
 
                   {/* Project Meta */}
                   <h2 className="text-xl font-bold leading-tight text-ink-primary mb-1">
-                    {project.title}
+                    {project.title}{" "}
+                    <span className="text-coral-400 text-xs font-semibold uppercase tracking-wide mb-3">
+                      ({project.subtitle} )
+                    </span>
                   </h2>
-                  <p className="text-coral-400 text-xs font-semibold uppercase tracking-wide mb-3">
-                    {project.subtitle}
-                  </p>
+                  <p></p>
                   <p className="text-ink-muted text-sm leading-relaxed mb-6">
                     {project.description}
                   </p>

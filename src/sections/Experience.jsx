@@ -7,7 +7,7 @@ import {
 } from "react-icons/fa";
 
 const TIMELINE_DATA = [
-  {
+  /*  {
     id: "current",
     type: "status",
     title: "Currently building Inkverse",
@@ -19,7 +19,7 @@ const TIMELINE_DATA = [
     nodeGlowClass: "shadow-[0_0_20px_rgba(16,185,129,0.4)] border-emerald-500",
     hoverClass:
       "hover:border-emerald-500/30 hover:shadow-[0_0_40px_rgba(16,185,129,0.05)]",
-  },
+  }, */
   {
     id: "tridhya",
     type: "work",
@@ -110,7 +110,7 @@ const TIMELINE_DATA = [
     hoverClass:
       "hover:border-indigo-500/30 hover:shadow-[0_0_40px_rgba(99,102,241,0.05)]",
   },
-  {
+  /* {
     id: "education",
     type: "education",
     institution: "Indus University, Ahmedabad",
@@ -121,7 +121,7 @@ const TIMELINE_DATA = [
     nodeGlowClass: "shadow-[0_0_20px_rgba(16,185,129,0.4)] border-emerald-500",
     hoverClass:
       "hover:border-emerald-500/30 hover:shadow-[0_0_40px_rgba(16,185,129,0.05)]",
-  },
+  }, */
 ];
 
 function Experience() {
@@ -132,19 +132,20 @@ function Experience() {
       className="min-h-screen flex flex-col items-center py-10"
       id="experience"
     >
-      <div className=" mx-auto max-w-7xl w-full">
+      <div className=" mx-auto max-w-7xl w-full p-6">
         {/* Section Header */}
-        <div className="bg-coral-950 text-sm text-coral-500 animate-pulse w-fit px-3 py-1 rounded-full mb-4">
-          <p>Where I've worked</p>
-        </div>
-        <h1 className="text-3xl md:text-4xl font-bold leading-tight text-ink-primary mb-2">
-          Experience
-        </h1>
-        <p className="text-ink-muted text-sm lg:text-base mb-12">
-          My journey so far — internship work, education, and what I'm focused
-          on now.
-        </p>
-
+        <header className="mb-6">
+          <div className="bg-coral-950 text-sm text-coral-500 animate-pulse w-fit px-3 py-1 rounded-full mb-2">
+            <p>Where I've worked</p>
+          </div>
+          <h1 className="text-3xl md:text-4xl font-bold leading-tight text-ink-primary mb-2">
+            Experience
+          </h1>
+          <p className="text-ink-muted text-sm lg:text-base">
+            My journey so far — internship work, education, and what I'm focused
+            on now.
+          </p>
+        </header>
         {/* Timeline Container */}
         <div className="relative pl-10 sm:pl-16">
           {/* Connecting Line with Gradient Fade-out at bottom */}
