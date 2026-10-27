@@ -43,7 +43,7 @@ const PROJECTS_DATA = [
     links: {
       github:
         "https://github.com/Sarah120405/tridhya-inernship-mern/tree/main/day-56",
-      live: "https://tridhya-inernship-mern-ylwh.vercel.app",
+      live: "",
     },
   },
   {
@@ -53,7 +53,7 @@ const PROJECTS_DATA = [
     description:
       "A platform for independent authors to publish, manage, and distribute their books.",
     detailedDescription:
-      "Inkverse is a production-grade multi-role SaaS platform connecting Authors, Readers, Print Vendors, and Admins.It features JWT authentication with bcrypt, TOTP- based 2FA, and role - based access control middleware across four user roles.Order and payment flows use Prisma's $transaction for atomic database operations with automatic rollback.The storefront catalog was optimized using database-level query compilation with PostgreSQL, and TanStack Query caching reduced redundant API calls.",
+      "Inkverse is a production-grade multi-role SaaS platform connecting Authors, Readers, Print Vendors, and Admins. It features JWT authentication with bcrypt, TOTP- based 2FA, and role - based access control middleware across four user roles. Order and payment flows use Prisma's $transaction for atomic database operations with automatic rollback. The storefront catalog was optimized using dynamic query compilation with PostgreSQL, and TanStack Query caching reduced redundant API calls.",
     tags: ["React.js", "Node.js", "Prisma ORM", "PostgreSQL", "Tanstack Query"],
     image: inkverseImg,
     icon: FaBookOpen,

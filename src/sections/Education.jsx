@@ -33,8 +33,8 @@ const EDUCATION_DATA = [
       </>,
       <>
         Consistently maintained a{" "}
-        <span className="text-ink-primary font-semibold">10.0 SGPA</span> across
-        semesters with distinction in programming subjects.
+        <span className="text-ink-primary font-semibold">10.0 SGPA</span> in
+        four semesters
       </>,
     ],
     accentClass: "border-emerald-500/20 text-emerald-500",
@@ -48,7 +48,7 @@ const EDUCATION_DATA = [
     institution: "Ankur School",
     degree: "Higher Secondary Certificate (HSC) — Science",
     duration: "2020 — 2022",
-    highlight: "79 Percentile",
+    highlight: "79 PR",
     description:
       "Studied Physics, Chemistry, Mathematics and Computer Science with distinction.",
     accentClass: "border-emerald-500/20 text-emerald-500",
@@ -61,7 +61,7 @@ const EDUCATION_DATA = [
     type: "degree",
     institution: "Ankur School",
     degree: "Secondary School Certificate (SSC)",
-    duration: "2019 -2020",
+    duration: "2019 - 2020",
     highlight: "86%",
     description: "",
     accentClass: "border-emerald-500/20 text-emerald-500",

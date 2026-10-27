@@ -7,25 +7,13 @@ import {
 } from "react-icons/fa";
 
 const TIMELINE_DATA = [
-  /*  {
-    id: "current",
-    type: "status",
-    title: "Currently building Inkverse",
-    subtitle:
-      "Final-year BTech CS student · Open to Full Stack Developer roles",
-    badge: "Open to work",
-    badgeType: "pulse",
-    accentClass: "border-emerald-500/20 text-emerald-500",
-    nodeGlowClass: "shadow-[0_0_20px_rgba(16,185,129,0.4)] border-emerald-500",
-    hoverClass:
-      "hover:border-emerald-500/30 hover:shadow-[0_0_40px_rgba(16,185,129,0.05)]",
-  }, */
   {
     id: "tridhya",
     type: "work",
     role: "MERN Full Stack Intern",
     company: "Tridhya Tech",
     duration: "Jul 2026 — Continue",
+    subDuration: "Internship - 6 months",
     highlight: "130+ test cases",
     bullets: [
       <>
@@ -110,18 +98,6 @@ const TIMELINE_DATA = [
     hoverClass:
       "hover:border-indigo-500/30 hover:shadow-[0_0_40px_rgba(99,102,241,0.05)]",
   },
-  /* {
-    id: "education",
-    type: "education",
-    institution: "Indus University, Ahmedabad",
-    degree: "Bachelor of Technology — Computer Science",
-    duration: "2021 — Expected 2026",
-    highlight: "10.0 SGPA",
-    accentClass: "border-emerald-500/20 text-emerald-500",
-    nodeGlowClass: "shadow-[0_0_20px_rgba(16,185,129,0.4)] border-emerald-500",
-    hoverClass:
-      "hover:border-emerald-500/30 hover:shadow-[0_0_40px_rgba(16,185,129,0.05)]",
-  }, */
 ];
 
 function Experience() {
